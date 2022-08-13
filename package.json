@@ -1,0 +1,55 @@
+{
+  "name": "@elricb/dotenv-config",
+  "version": "0.0.1",
+  "description": "Load .env environment variables",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elricb/dotenv-config.git"
+  },
+  "author": "elricb (https://github.com/elricb)",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elricb/dotenv-config/issues"
+  },
+  "homepage": "https://github.com/elricb/dotenv-config#readme",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "import": {
+        "module": "./lib/esm/index.js",
+        "node": "./lib/esm/index.mjs",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "node": "./lib/cjs/index.cjs",
+        "default": "./lib/cjs/index.js"
+      },
+      "default": "./lib/cjs/index.js"
+    },
+    "./amd/*": "./lib/amd/*",
+    "./cjs/*": "./lib/cjs/*",
+    "./esm/*": "./lib/esm/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "lint": "xo",
+    "build-cjs": "./node_modules/typescript/bin/tsc --project ./tsconfig-cjs.json --outDir ./lib/cjs --importHelpers",
+    "build-esm": "./node_modules/typescript/bin/tsc --project ./tsconfig-esm.json --outDir ./lib/esm --importHelpers",
+    "build": "rm -rf ./lib && npm run build-esm && npm run build-cjs",
+    "release": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "@elricb/prettier-config": "^0.0.1",
+    "@elricb/xo-config": "^0.0.14",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.7.4",
+    "xo": "^0.51.0"
+  },
+  "dependencies": {
+    "@elricb/find-file-up": "^1.0.1",
+    "dotenv": "^16.0.1"
+  }
+}
