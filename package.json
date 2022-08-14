@@ -51,5 +51,11 @@
   "dependencies": {
     "@elricb/find-file-up": "^1.0.1",
     "dotenv": "^16.0.1"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "dotenv"
+  ]
 }
