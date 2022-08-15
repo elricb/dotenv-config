@@ -19,11 +19,11 @@
     ".": {
       "import": {
         "module": "./lib/esm/index.js",
-        "node": "./lib/esm/index.mjs",
+        "node": "./lib/esm/index.js",
         "default": "./lib/esm/index.js"
       },
       "require": {
-        "node": "./lib/cjs/index.cjs",
+        "node": "./lib/cjs/index.js",
         "default": "./lib/cjs/index.js"
       },
       "default": "./lib/cjs/index.js"
