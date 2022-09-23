@@ -4,13 +4,11 @@ import dotenv from "dotenv";
 export default function (directory: string, config: DotEnvConfig = {}): void {
   const defaultConfig: DotEnvConfig = {
     override: true,
-    debug: false
+    path: findFileUp(directory, ".env")
   };
 
-  const dirFind = findFileUp(directory, ".env");
-
-  if (dirFind) {
-    defaultConfig.path = dirFind;
+  if (!defaultConfig.path) {
+    delete defaultConfig.path;
   }
 
   dotenv.config(Object.assign(defaultConfig, config));
