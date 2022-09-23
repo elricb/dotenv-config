@@ -1,13 +1,6 @@
 import findFileUp from "@elricb/find-file-up";
 import dotenv from "dotenv";
 
-type DotEnvConfig = {
-  override?: boolean;
-  debug?: boolean;
-  path?: string;
-  encoding?: string;
-};
-
 export default function (directory: string, config: DotEnvConfig = {}): void {
   const defaultConfig: DotEnvConfig = {
     override: true,

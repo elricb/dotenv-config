@@ -15,5 +15,6 @@
     "declarationMap": true
   },
   "include": ["**/*.ts", "**/*.js"],
-  "exclude": ["**/*.spec.ts"]
+  "exclude": ["**/*.spec.ts"],
+  "files": ["src/typescript.d.ts"]
 }

@@ -17,3 +17,6 @@ import dotenv from "@elricb/dotenv-config";
 dotenv(__dirname);
 ```
 
+## Documentation
+
+See `./docs`.
