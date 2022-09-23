@@ -1,6 +1,6 @@
 {
   "name": "@elricb/dotenv-config",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Load .env environment variables",
   "license": "MIT",
   "author": "elricb (https://github.com/elricb)",
