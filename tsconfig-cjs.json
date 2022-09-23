@@ -10,7 +10,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true
   },
   "include": ["**/*.ts", "**/*.js"],
   "exclude": ["**/*.spec.ts"]

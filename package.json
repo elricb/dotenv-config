@@ -15,24 +15,6 @@
   },
   "homepage": "https://github.com/elricb/dotenv-config#readme",
   "type": "commonjs",
-  "exports": {
-    ".": {
-      "import": {
-        "module": "./lib/esm/index.js",
-        "node": "./lib/esm/index.js",
-        "default": "./lib/esm/index.js"
-      },
-      "require": {
-        "node": "./lib/cjs/index.js",
-        "default": "./lib/cjs/index.js"
-      },
-      "default": "./lib/cjs/index.js"
-    },
-    "./amd/*": "./lib/amd/*",
-    "./cjs/*": "./lib/cjs/*",
-    "./esm/*": "./lib/esm/*",
-    "./package.json": "./package.json"
-  },
   "scripts": {
     "lint": "xo",
     "build-cjs": "./node_modules/typescript/bin/tsc --project ./tsconfig-cjs.json --outDir ./lib/cjs --importHelpers",
@@ -42,11 +24,9 @@
   },
   "devDependencies": {
     "@elricb/prettier-config": "^0.0.1",
-    "@elricb/xo-config": "^0.0.14",
-    "jest": "^28.1.3",
-    "ts-jest": "^28.0.7",
+    "@elricb/xo-config": "^0.1.1",
     "typescript": "^4.7.4",
-    "xo": "^0.51.0"
+    "xo": "^0.52.1"
   },
   "dependencies": {
     "@elricb/find-file-up": "^1.0.1",
