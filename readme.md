@@ -19,4 +19,13 @@ dotenv(__dirname);
 
 ## Documentation
 
-See `./docs`.
+### Release Notes
+
+View commit tag for release notes.
+
+* [release list](https://github.com/elricb/dotenv-config/tags)
+
+### API
+
+See `./docs/index.html`.
+
