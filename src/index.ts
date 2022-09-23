@@ -7,7 +7,7 @@ export default function (directory: string, config: DotEnvConfig = {}): void {
     debug: false
   };
 
-  const dirFind = String(findFileUp(directory, ".env"));
+  const dirFind = findFileUp(directory, ".env");
 
   if (dirFind) {
     defaultConfig.path = dirFind;
