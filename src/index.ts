@@ -1,8 +1,12 @@
 import findFileUp from "@elricb/find-file-up";
-import dotenv from "dotenv";
+import {config} from "dotenv";
+import type {DotenvConfigOptions} from "dotenv";
 
-export default function (directory: string, config: DotEnvConfig = {}): void {
-  const defaultConfig: DotEnvConfig = {
+export default function (
+  directory: string,
+  userConfig: DotenvConfigOptions = {}
+): void {
+  const defaultConfig: DotenvConfigOptions = {
     override: true,
     path: findFileUp(directory, ".env")
   };
@@ -11,5 +15,5 @@ export default function (directory: string, config: DotEnvConfig = {}): void {
     delete defaultConfig.path;
   }
 
-  dotenv.config(Object.assign(defaultConfig, config));
+  config(Object.assign(defaultConfig, userConfig));
 }
