@@ -2,7 +2,7 @@ import findFileUp from "@elricb/find-file-up";
 import {config} from "dotenv";
 import type {DotenvConfigOptions} from "dotenv";
 
-export default function dotenvConfig (
+function dotenvConfig (
   directory: string,
   userConfig: DotenvConfigOptions = {}
 ): void {
@@ -17,3 +17,5 @@ export default function dotenvConfig (
 
   config(Object.assign(defaultConfig, userConfig));
 }
+
+export default dotenvConfig;
