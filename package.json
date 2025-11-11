@@ -15,13 +15,14 @@
   "source": "src/index.ts",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
+  "exports": { ".": { "import": "./lib/esm/index.js", "require": "./lib/cjs/index.js" } },
   "type": "commonjs",
   "scripts": {
     "lint": "xo",
     "test": "exit 0",
     "docs": "npx typedoc --entryPointStrategy expand --out ./docs ./src",
-    "build-cjs": "tsc --project ./tsconfig.json --outDir ./lib/cjs --importHelpers",
-    "build-esm": "tsc --project ./tsconfig-esm.json --outDir ./lib/esm --importHelpers",
+    "build-cjs": "tsc --project ./tsconfig.cjs.json --outDir ./lib/cjs --importHelpers",
+    "build-esm": "tsc --project ./tsconfig.esm.json --outDir ./lib/esm --importHelpers",
     "build": "rm -rf ./lib && npm run build-esm && npm run build-cjs",
     "release": "npm run lint && npm test && npm run docs && npm run build"
   },
