@@ -1,6 +1,6 @@
+import type {DotenvConfigOptions} from "dotenv";
 import findFileUp from "@elricb/find-file-up";
 import {config} from "dotenv";
-import type {DotenvConfigOptions} from "dotenv";
 
 function dotenvConfig (
   directory: string,
