@@ -5,7 +5,5 @@
     "lib": ["esnext"],
     "module": "es2022",
     "moduleResolution": "node"
-  },
-  "include": ["**/*.ts", "**/*.js"],
-  "exclude": ["**/*.spec.ts"]
+  }
 }

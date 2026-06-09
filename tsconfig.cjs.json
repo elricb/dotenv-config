@@ -5,7 +5,5 @@
     "lib": ["es2022"],
     "module": "commonjs",
     "moduleResolution": "node"
-  },
-  "include": ["**/*.ts", "**/*.js"],
-  "exclude": ["**/*.spec.ts"]
+  }
 }
